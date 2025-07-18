@@ -1,0 +1,174 @@
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+}
+
+/* logo e o titulo ao lado */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; 
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cabecalho img {
+  width: 50px;
+  height: auto;
+  position: static; 
+}
+
+.cabecalho h1 {
+  font-size: 1.8em;
+  color: #333;
+  margin: 0;
+  position: static;
+  text-align: center;
+}
+
+/* Responsividade referente ao titulo e ao logo */
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.4em;
+  }
+
+  .cabecalho img {
+    width: 40px;
+  }
+}
+
+/* formulário */
+.form-container {
+    width: 50%;
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    color: #444;
+}
+
+/* parte do texto em geral */
+textarea, input[type="text"], input[type="file"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    background-color: green;
+    color: #000;
+    border: 1px solid #999;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: black;
+    text-align: left;
+}
+
+/* botão */
+input[type="button"],
+button {
+    background-color: #2b7a78;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+input[type="button"]:hover,
+button:hover {
+    background-color: #205c5a;
+}
+
+/* media final */
+#mediaFinal {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2b7a78;
+    text-align: center;
+}
+
+#mediaFinal h3 {
+    margin-top: 30px;
+}
+
+/* Dois botões de PDF e Excel */
+.avaliacao-bloco {
+    margin-top: 25px;
+}
+
+.avaliacao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avaliacao-header label {
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+}
+
+.botoes-exportar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.botoes-exportar button {
+  background-color: #2a7b7b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  width: auto; /* controla a largura */
+  flex: 1;      /* distribui espaço igual se quiser */
+  max-width: 200px;
+  transition: 0.3s ease;
+}
+
+.botoes-exportar button:hover {
+  background-color: #1d5c5c;
+}

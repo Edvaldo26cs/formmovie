@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--imagem da capa de fundo-->
+<body style="background-image: url(img/DALL·E-2025-02-16-21.59.png);">
+
+    <!--formulário-->
+    <div class="form-container">
+
+        <!--logo e nome da avaliação-->
+        <div class="cabecalho">
+    <img src="img/11zon_cropped.png" alt="Logo">
+    <h1>Avaliação de Filmes</h1>
+    </div>
+
+        <!--imagem para selecionar-->
+        <label for="imagem">Selecione a capa</label>
+        <input type="file" id="imagem">
+
+        <!--escrever o nome do diretor-->
+        <label for="diretor">Diretor</label>
+        <input type="text" id="diretor" maxlength="50" placeholder="James Cameron" required />
+
+        <!--escrever o nome do roteirista-->
+        <label for="roteirista">Roteirista</label>
+        <input type="text" id="roteirista" maxlength="50" placeholder="James Cameron" required />
+
+        <!--div com select para selecionar o gênero-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="generoPrincipal">Gênero</label>
+            </div>
+            <select id="generoPrincipal">
+                <option value="">Gênero Principal</option>
+                <option value="Ação">Ação</option>
+                <option value="Animação">Animação</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Documentário">Documentário</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Faroeste">Faroeste</option>
+                <option value="Ficção Científica">Ficção Científica</option>
+                <option value="Musical">Musical</option>
+                <option value="Romance">Romance</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Terror">Terror</option>
+            </select>
+            <select id="subgenero">
+                <option value="">Subgênero</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Biografico">Biográfico</option>
+                <option value="Espionagem">Espionagem</option>
+                <option value="Found Footage">Found Footage</option>
+                <option value="Guerra">Guerra</option>
+                <option value="Misterio">Mistério</option>
+                <option value="Policial">Policial</option>
+                <option value="Psicologico">Psicológico</option>
+                <option value="Slasher">Slasher</option>
+                <option value="Trash">Trash</option>
+                <option value="Triller">Triller</option>
+            </select>
+        </div>
+
+        <!--escolher uma data-->
+        <label for="dataLancamento">Data de lançamento (original ou nativo)</label>
+        <input type="date" id="dataLancamento" required />
+
+        <!-- Título -->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaTitulo">Título original</label>
+                <input type="number" id="notaTitulo" min="0" max="1" step="0.1" placeholder="Nota" required>
+            </div>
+            <input id="tituloOriginal" type="text" maxlength="50" placeholder="Título original" required />
+
+            <label for="tituloNativo">Título nativo</label>
+            <input id="tituloNativo" type="text" maxlength="50" placeholder="Título nativo" required>
+        </div>
+
+        <!--classificação indicativa-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaClassificacao">Classificação indicativa</label>
+                <input type="number" id="notaClassificacao"  min="0" max="1" step="0.1" placeholder="Nota" required>
+            </div>
+            <select id="classificacaoIndicativa">
+                <option value="">Selecione</option>
+                <option value="L">Livre</option>
+                <option value="10">10 anos</option>
+                <option value="12">12 anos</option>
+                <option value="14">14 anos</option>
+                <option value="16">16 anos</option>
+                <option value="18">18 anos</option>
+            </select>
+        </div>
+
+        <!--personagens-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaPersonagens">Personagens</label>
+                <input type="number" id="notaPersonagens" min="0" max="1.5" step="0.1" placeholder="Nota" required>
+            </div>
+
+               <fieldset id="personagens">
+    <legend>Características dos personagens</legend>
+
+    <label><input type="checkbox" name="personagens" value="ótimo figurino" /> Ótimo figurino</label><br />
+    <label><input type="checkbox" name="personagens" value="boas atuações" /> Boas atuações</label><br />
+    <label><input type="checkbox" name="personagens" value="ausencia de personagens" /> Ausência de personagens</label><br />
+    <label><input type="checkbox" name="personagens" value="descaracterização" /> Descaracterização</label><br />
+    <label><input type="checkbox" name="personagens" value="diferente da obra original" /> Diferente da obra original</label><br />
+    <label><input type="checkbox" name="personagens" value="pessimas atuações" /> Péssima(s) atuações</label>
+  </fieldset>
+</div>
+
+        <!--perguntas e respostas-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaPerguntas">Perguntas e respostas</label>
+                <input type="number" id="notaPerguntas" min="0" max="1.5" step="0.1" placeholder="Nota" required>
+        </div>
+
+        <fieldset id="perguntas">
+    <legend>Roteiro</legend>
+
+    <label><input type="checkbox" name="perguntas" value="todas as perguntas respondidas" /> Todas as perguntas respondidas</label><br />
+    <label><input type="checkbox" name="perguntas" value="nenhuma pergunta respondida" /> Nenhuma pergunta respondida</label><br />
+    <label><input type="checkbox" name="perguntas" value="não há como responder as perguntas" /> Não há como responder as perguntas corretamente</label><br />
+    <label><input type="checkbox" name="perguntas" value="aguardando sequência para responder" /> Aguardando sequência para responder</label><br />
+  </fieldset>
+</div>
+
+        <!--tema-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaTema">Desenvolvimento do tema</label>
+                <input type="number" id="notaTema" min="0" max="1.5" step="0.1" placeholder="Nota" required>
+        </div>
+        <select id="temaEscrito">
+                <option value="">Selecione</option>
+                <option value="tema desenvolvido">Tema desenvolvido</option>
+                <option value="tema não desenvolvido">Tema não desenvolvido</option>
+        </select>
+        </div>
+
+        <!--efeitos visuais-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaVisuais">Efeitos visuais</label>
+                <input type="number" id="notaVisuais" min="0" max="1" step="0.1" placeholder="Nota" required>
+        </div>
+        <select id="efeitosEspeciais">
+                <option value="">Selecione</option>
+                <option value="não prejudicou">Não prejudicou</option>
+                <option value="poderia ter sido melhor">Poderia ter sido melhor</option>
+                <option value="não assistivel">Não assistível</option>
+        </select>
+        </div>
+
+        <!--efeitos sonoros-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaSonoros">Efeitos sonoros</label>
+                <input type="number" id="notaSonoros" min="0" max="1" step="0.1" placeholder="Nota" required>
+        </div>
+        <select id="trilhaSonora">
+                <option value="">Selecione</option>
+                <option value="musicas e trilhas sonoras equilibradas">Músicas e trilhas sonoras equilibradas</option>
+                <option value="não consegue escutar os personagens">Não consegue escutar os personagens</option>
+                <option value="poderia ter sido melhor">Poderia ter sido melhor</option>
+        </select>
+        </div>
+
+        <!--comentario final-->
+        <div class="avaliacao-bloco">
+            <div class="avaliacao-header">
+                <label for="notaConclusao">Conclusão</label>
+                <input type="number" id="notaConclusao" min="0" max="1.5" step="0.1" placeholder="Nota" required>
+            </div>
+            <select id="comentarioFinal">
+                <option value="">Selecione</option>
+                <option value="perfeito e recomendo">Perfeito e recomendo</option>
+                <option value="poderia ter sido melhor">Poderia ter sido melhor</option>
+                <option value="pessimo e não recomendo">Péssimo e não recomendo</option>
+        </select>
+        <input type="text" id="titulo" maxlength="50" placeholder="Escreva a sua recomendação"/>
+        </div>
+
+        <!--media final e botão de click para calcular-->
+         <div id="mediaFinal">0.0</div>
+
+        <button onclick="calcularMedia()">Calcular Média</button>
+
+            <!--botões para exportar o arquivo para PDF e Excel-->
+            <div class="botoes-exportar">
+        <button onclick="exportarParaExcel()">Exportar para Excel</button>
+        <button onclick="exportarParaPDF()">Exportar para PDF</button>
+</div>
+
+    <!--Bibliotecas necessárias para utilizar o JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
